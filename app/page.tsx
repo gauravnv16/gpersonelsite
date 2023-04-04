@@ -1,91 +1,92 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+    <nav className="flex flex-row justify-between p-2 px-5 bg-gray-100">
+        <h1 className="text-2xl font-bold font-segoeui text-gray-800">
+          GP
+        </h1>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
+        <i className="fas fa-bars text-2xl text-black"></i>
+    </nav>
+      <header className="flex flex-col justify-center items-center mb-10" style={{
+        height: "90vh",
+        background: "url('https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        
+      }}>
+        <section className="flex flex-col items-center">
+          <h1 className="text-sm font-bold text-white font-segoeui text-gray-800">
+            Hello, I'm Gaurav N V 🫡
+          </h1>
+          <p className="text-5xl font-black my-5 text-center">
+            Software Developer 
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          <p className="text-gray-400">
+            Have a look at my <a className="text-blue-500" href="/projects">projects</a> and <a className="text-blue-500" href="/blog">blog</a>
           </p>
-        </a>
-      </div>
-    </main>
+        </section>
+        <section className="flex flex-row my-2">
+          <button className="bg-blue-600 my-5 font-semibold text-white py-1 px-10 rounded my-2">
+            Explore
+          </button>
+          <Link href="" className="border border-white text-white my-5 font-semibold m-2 text-gray-600 py-1 px-10 rounded my-2">
+            <i className="fab fa-github"></i> Github
+          </Link>
+        </section>
+      </header>
+      {/* <main className="flex flex-col justify-center items-center" style={{
+        height: "90vh",
+      }}>
+        <h1 className="text-2xl font-bold font-segoeui text-gray-800">
+           SKILLS
+        </h1>
+        <div className="flex flex-row flex-wrap mt-2">
+        <div className="bg-gray-200 rounded-full px-3 py-1 m-1">
+            <p className="text-gray-600">python</p>
+          </div>
+        <div className="bg-gray-200 rounded-full px-3 py-1 m-1">
+            <p className="text-gray-600">C ++</p>
+          </div>
+          <div className="bg-gray-200 rounded-full px-3 py-1 m-1">
+            <p className="text-gray-600">JavaScript</p>
+          </div>
+          <div className="bg-gray-200 rounded-full px-3 py-1 m-1">
+            <p className="text-gray-600">React</p>
+          </div>
+          <div className="bg-gray-200 rounded-full px-3 py-1 m-1">
+            <p className="text-gray-600">Next.js</p>
+          </div>
+        </div>
+      </main> */}
+      {/* <main className="px-5 my-5">
+        <h1 className="text-2xl font-bold font-segoeui text-gray-800">
+            PROJECTS
+        </h1>
+        <div className="flex flex-row flex-wrap mt-2">
+          <div className="bg-gray-200 rounded-2xl px-3 py-1 m-1">
+            <img src="https://images.unsplash.com/photo-1626126090003-8b1b2f1b1b1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="project image" className="w-64 h-64 rounded-2xl" />
+            <div className="flex flex-row justify-between">
+              <p className="text-gray-600 font-bold">GBlog</p>
+            </div>
+            <p className="text-gray-600">
+              A blog made with Next.js and TailwindCSS,
+
+            </p>
+            <div className="flex flex-row justify-between">
+              <button className="text-xs bg-blue-500 my-5 font-semibold text-white py-1 px-10 rounded my-2">
+                <i className="fas fa-arrow-up-right-from-square m-2"></i>view 
+              </button>
+              <button className="text-xs border border-black my-5 font-semibold m-2 text-gray-600 py-1 px-10 rounded my-2">
+                <i className="fab fa-github"></i> Github
+              </button>
+            </div>
+          </div>
+          </div>
+      </main> */}
+    </>
   )
 }
